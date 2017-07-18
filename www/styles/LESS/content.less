@@ -1,0 +1,67 @@
+@import "variables";
+
+.cub-title {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+  flex: 1; }
+
+
+.cub-content {
+  padding-top: 60px;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
+
+
+.cub-card {
+  padding: 16px;
+  position: relative;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 2px;
+  margin: 16px;
+  box-shadow: @shadow-crd; }
+
+.cub-fab:before { 
+    content: "+";
+	background: @primary;
+    color: #FFF;
+    box-shadow: @shadow-btn;
+	width: 62px;
+	height: 62px;
+	border-radius: 50%;
+    cursor: pointer;
+	text-align:center;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+    margin: 6%;
+	display: inline-block;
+    padding-top: inherit;
+    font-size: 3.2em;
+}
+
+.cub-button {
+  background-color: @primary;
+  color: #FFF;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  padding: 10px 15px 10px 15px;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: @shadow-btn;
+  margin: 2%;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid #666;
+}

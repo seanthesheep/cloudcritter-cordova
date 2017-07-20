@@ -2,6 +2,7 @@
             
             preload:function(){
            // this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;this.scale.minWidth = 360;this.scale.minHeight = 680;this.scale.maxWidth = 768;this.scale.maxHeight = 1152;
+                 
            
             game.load.script("webfont", "//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js");
             game.add.text(0, 0, "fix", {font:"1px VT323", fill:"#2979FF"});

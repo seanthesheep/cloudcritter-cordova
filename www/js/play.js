@@ -57,7 +57,7 @@
 			}
 		}
 	}     
- 
+    
 	function updateScore(){
 		scoreText.text = "Clouds: "+score+"\nTop: "+topScore;
         scoreText.font = 'VT323'
@@ -104,8 +104,8 @@
 		}
 	}	
 	function die(){
-		localStorage.setItem("topFlappyScore",Math.max(score,topScore));	
-		game.state.start("Play");
+		localStorage.setItem("topFlappyScore",Math.max(score,topScore));
+		game.state.start('play');
 	}
 	function checkLanding(n,p){
 		if(n.body.touching.down){

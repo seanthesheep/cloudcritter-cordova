@@ -2,6 +2,11 @@
             
             preload:function(){
            // this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;this.scale.minWidth = 360;this.scale.minHeight = 680;this.scale.maxWidth = 768;this.scale.maxHeight = 1152;
+                
+    game.preloadBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'preloadbar');
+    game.preloadBar.anchor.setTo(0.5);
+
+    game.load.setPreloadSprite(this.game.preloadBar);    
            
             game.load.script("webfont", "//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js");
             game.add.text(0, 0, "fix", {font:"1px VT323", fill:"#2979FF"});

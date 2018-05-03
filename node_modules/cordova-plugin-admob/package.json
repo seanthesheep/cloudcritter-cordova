@@ -1,0 +1,98 @@
+{
+  "_from": "cordova-plugin-admob",
+  "_id": "cordova-plugin-admob@3.2.4",
+  "_inBundle": false,
+  "_integrity": "sha1-LcZxq1mndLA8y2yaarNFgLIE1eI=",
+  "_location": "/cordova-plugin-admob",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-admob",
+    "name": "cordova-plugin-admob",
+    "escapedName": "cordova-plugin-admob",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-admob/-/cordova-plugin-admob-3.2.4.tgz",
+  "_shasum": "2dc671ab59a774b03ccb6c9a6ab34580b204d5e2",
+  "_spec": "cordova-plugin-admob",
+  "_where": "/home/sean/projects/cloudcritter",
+  "author": {
+    "name": "Raymond Xie"
+  },
+  "bugs": {
+    "url": "https://github.com/floatinghotpot/cordova-plugin-admob/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-admob",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "The FASTEST and EASIEST TO USE Cordova Admob plugin for Android, iOS and Windows phone. Pure open source without any traffic sharing. Allows preloading and automatic loading of interstitials and banners plus more. Works with Cordova, Phonegap, Intel XDK/Crosswalk, Ionic, Meteor and more.",
+  "homepage": "https://github.com/floatinghotpot/cordova-plugin-admob#readme",
+  "keywords": [
+    "cordova",
+    "admob",
+    "plugin",
+    "phonegap",
+    "intel-xdk",
+    "intel",
+    "xdk",
+    "crosswalk",
+    "ionic",
+    "meteor",
+    "ad",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8",
+    "cordova-amazon-fireos",
+    "google",
+    "ads",
+    "eclipse",
+    "android-studio",
+    "simple",
+    "easy",
+    "android",
+    "ios",
+    "windows",
+    "phonegap",
+    "monetization",
+    "monetisation",
+    "money",
+    "banner",
+    "interstitial",
+    "advertisement",
+    "advertising",
+    "earn",
+    "cordova-admob",
+    "admobpro",
+    "iad",
+    "flurry",
+    "mobfox",
+    "mopub",
+    "inmobi",
+    "chartboost",
+    "domob",
+    "rjfun"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-admob",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floatinghotpot/cordova-plugin-admob.git"
+  },
+  "version": "3.2.4"
+}

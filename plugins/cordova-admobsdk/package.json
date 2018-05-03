@@ -1,0 +1,61 @@
+{
+  "_from": "cordova-admobsdk",
+  "_id": "cordova-admobsdk@1.0.4",
+  "_inBundle": false,
+  "_integrity": "sha1-ca1sC+vXVITpEuBtFCpE9nsXPn4=",
+  "_location": "/cordova-admobsdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-admobsdk",
+    "name": "cordova-admobsdk",
+    "escapedName": "cordova-admobsdk",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-admobsdk/-/cordova-admobsdk-1.0.4.tgz",
+  "_shasum": "71ad6c0bebd75484e912e06d142a44f67b173e7e",
+  "_spec": "cordova-admobsdk",
+  "_where": "/home/sean/projects/cloudcritter",
+  "author": {
+    "name": "Liming Xie"
+  },
+  "bugs": {
+    "url": "https://github.com/floatinghotpot/cordova-admobsdk/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-admobsdk",
+    "platforms": [
+      "android",
+      "ios",
+      "amazon-fireos",
+      "wp8",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "Adds Google Mobile Ads SDK to Cordova projects, as dependency for other plugins",
+  "homepage": "https://github.com/floatinghotpot/cordova-admobsdk#readme",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "ad",
+    "admob",
+    "google",
+    "rjfun"
+  ],
+  "license": "MIT",
+  "name": "cordova-admobsdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floatinghotpot/cordova-admobsdk.git"
+  },
+  "version": "1.0.4"
+}

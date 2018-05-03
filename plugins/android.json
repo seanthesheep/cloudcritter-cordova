@@ -1,18 +1,25 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-admob": {
+      "PACKAGE_NAME": "io.ssullivan.cloudcritter"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ssullivan.cloudcritter"
     },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.ssullivan.cloudcritter"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "io.ssullivan.cloudcritter"
-        }
-    },
-    "dependent_plugins": {}
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.ssullivan.cloudcritter"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-admobsdk": {
+      "PACKAGE_NAME": "io.ssullivan.cloudcritter"
+    }
+  }
 }

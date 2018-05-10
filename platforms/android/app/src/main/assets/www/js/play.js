@@ -1,14 +1,11 @@
-
-
-    
-    
-
-
 	var critter;
-    var jumping;
-    var landing;
+	var bird;
+	var plane;
+	var skyBackground;
+    	var jumping;
+    	var landing;
 	var critterGravity = 800;
-    var cloudGravity = -150;
+	var cloudGravity = -150;
 	var critterJumpPower;    
 	var score=0;
 	var scoreText;
@@ -25,6 +22,15 @@
      play.prototype = {
 
 		create:function(){
+
+			game.stage.backgroundColor = '#3763d4';
+			skyBackground = this.game.add.tileSprite(0,
+				game.height - this.game.cache.getImage('sky-background').height,
+				game.width,
+				game.cache.getImage('sky-background').height,
+				'sky-background'
+			);
+
 			critterJumping = false;
 			critterFallingDown = false;
 			score = 0;
@@ -36,9 +42,9 @@
                 fill: "#fff"
 			});
 			updateScore();
-			game.stage.backgroundColor = "#2979FF";
 			game.physics.startSystem(Phaser.Physics.ARCADE);
 			critter = game.add.sprite(80,0,"critter");
+			critter.scale.setTo(1.9,1.9);
             critter.frame = 5;
 			critter.anchor.set(0.5);
 			critter.lastPole = 1;
@@ -48,9 +54,26 @@
 			addPole(80);
             critter.animations.add("jump", [2, 2, 0, 0, 0], 2, true);
             jumping = game.add.audio("jumping");
-            landing = game.add.audio("landing");
-		},
+			landing = game.add.audio("landing");
+			bird = game.add.sprite(50,0,"birds");
+			bird2 = game.add.sprite(-1000,400, "birds");
+			plane = game.add.sprite(-5000, 200, "plane");
+			plane.scale.setTo(.4,.4);
+			plane.animations.add("fly");
+			bird.animations.add("fly");
+			bird2.animations.add("fly");
+			bird2.animations.play("fly", 15,true);
+			bird.animations.play("fly", 15, true);
+			plane.animations.play("fly", 15, true);
+		}, 
 		update:function(){
+			plane.x += 5;
+			bird.x += 2;
+			bird2.x += 2;
+			if (bird.x < -bird.width)
+			{
+				bird.x = game.world.width;
+			}
 			game.physics.arcade.collide(critter, poleGroup, checkLanding);
 			if(critter.y>game.height){
 				die();
@@ -77,12 +100,12 @@
           critterJumpPower= -powerBar.width*3-100
           powerBar.destroy();
           game.tweens.removeAll();
-          critter.body.velocity.y = critterJumpPower*2.2;
+          critter.body.velocity.y = critterJumpPower*2;
           critterJumping = true;
           powerTween.stop();
           game.input.onUp.remove(jump, this);
           critter.animations.play("jump");
-          jumping.play();
+		  jumping.play();
      }     
      function addNewPoles(){
      	var maxPoleX = 0;
@@ -146,10 +169,11 @@
 	Pole.prototype.constructor = Pole;
 	Pole.prototype.update = function() {
           if(critterJumping && !critterFallingDown){
-               this.body.velocity.x = critterJumpPower;
+			   this.body.velocity.x = critterJumpPower;
+			   skyBackground.tilePosition.x -= 0.1;
           }
           else{
-               this.body.velocity.x = 0
+			   this.body.velocity.x = 0
           }
 		if(this.x<-this.width){
 			this.destroy();

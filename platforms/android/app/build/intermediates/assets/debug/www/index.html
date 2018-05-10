@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:image" content="images/cloudcritter.PNG">
+  <meta property="twitter:image" content="images/cloudcritter.PNG">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Critter</title>
+    
+  <link rel="icon" href="images/icons/favicon.png">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+    <!-- extra css -->
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+		<script src="js/phaser.min.js"></script>
+        <script async src="js/app.js"></script> 
+        <script src="js/load.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/play.js"></script>
+        <script src="js/game.js"></script>
+
+</head>
+<body id="game" onload="initAd()">
+
+
+
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+
+    function initAd(){
+        if ( window.plugins && window.plugins.AdMob ) {
+    	    var ad_units = {
+				ios : {
+					banner: 'ca-app-pub-6869992474017983/4806197152',
+					interstitial: 'ca-app-pub-6869992474017983/7563979554'
+				},
+				android : {
+					banner: 'ca-app-pub-6869992474017983/9375997553',
+					interstitial: 'ca-app-pub-6869992474017983/1657046752'
+				},
+				wp8 : {
+					banner: 'ca-app-pub-6869992474017983/8878394753',
+					interstitial: 'ca-app-pub-6869992474017983/1355127956'
+				}
+    	    };
+    	    var admobid = "";
+    	    if( /(android)/i.test(navigator.userAgent) ) {
+    	    	admobid = ad_units.android;
+    	    } else if(/(iphone|ipad)/i.test(navigator.userAgent)) {
+    	    	admobid = ad_units.ios;
+    	    } else {
+    	    	admobid = ad_units.wp8;
+    	    }
+            window.plugins.AdMob.setOptions( {
+                publisherId: admobid.banner,
+                interstitialAdId: admobid.interstitial,
+                bannerAtTop: false, // set to true, to put banner at top
+                overlap: false, // set to true, to allow banner overlap webview
+                offsetTopBar: false, // set to true to avoid ios7 status bar overlap
+                isTesting: true, // receiving test ad
+                autoShow: true // auto show interstitial ad when loaded
+            });
+            
+        } else {
+            alert( 'admob plugin not ready' );
+        }
+      }
+        </script>
+    </body> 
+</html>
